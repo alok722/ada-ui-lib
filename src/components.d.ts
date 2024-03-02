@@ -5,57 +5,51 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { BadgeType } from "./components/badge/badge";
+export { BadgeType } from "./components/badge/badge";
 export namespace Components {
-    interface MyComponent {
+    interface GlBadge {
         /**
-          * The first name
+          * It defines text of the badge
          */
-        "first": string;
+        "text": string;
         /**
-          * The last name
+          * It defines type of the badge
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "variant": BadgeType;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLGlBadgeElement extends Components.GlBadge, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLGlBadgeElement: {
+        prototype: HTMLGlBadgeElement;
+        new (): HTMLGlBadgeElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "gl-badge": HTMLGlBadgeElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface GlBadge {
         /**
-          * The first name
+          * It defines text of the badge
          */
-        "first"?: string;
+        "text": string;
         /**
-          * The last name
+          * It defines type of the badge
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "variant"?: BadgeType;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "gl-badge": GlBadge;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "gl-badge": LocalJSX.GlBadge & JSXBase.HTMLAttributes<HTMLGlBadgeElement>;
         }
     }
 }

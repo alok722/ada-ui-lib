@@ -1,0 +1,171 @@
+/*
+  TO USE:
+  primary: #BFD732
+  on-primary: #444444
+  error: #ff2e3d
+  info: #00b4ec
+  warning: #ff9104
+*/
+
+:root {
+  /* Spacing */
+  --unit: 0.5rem;
+  --xxs: calc(var(--unit) * 0.5);
+  --xs: calc(var(--unit) * 1);
+  --s: calc(var(--unit) * 1.5);
+  --m: calc(var(--unit) * 3);
+  --b: calc(var(--unit) * 4);
+  --l: calc(var(--unit) * 5);
+  --xl: calc(var(--unit) * 6);
+
+  /* Z index */
+  --low: 1;
+  --medium: 2;
+  --high: 3;
+
+  /** Colors */
+  /* Brand */
+  --primary-color: #152a69;
+  --on-primary-color: var(--light-color);
+  --primary-color-5: rgba(21, 42, 105, 0.05);
+  --primary-color-12: rgba(21, 42, 105, 0.12);
+  --primary-color-90: rgba(21, 42, 105, 0.9);
+
+  --secondary-color: #00c6c5;
+  --on-secondary-color: white;
+  --secondary-color-90: rgba(0, 198, 197, 0.9);
+
+  --accent-color: #e43231;
+  --on-accent-color: white;
+
+  /* Creative palette */
+  --primary-light-color: #d6d9ed;
+  --on-primary-light-color: var(--primary-color);
+
+  --secondary-light-color: #b5eddb;
+  --on-secondary-light-color: var(--primary-color);
+
+  --terciary-color: #f5e5c2;
+  --on-terciary-color: var(--primary-color);
+
+  --accent-light-color: #e8927c;
+  --on-accent-light-color: var(--primary-color);
+
+  --green-cp-color: #c7e995;
+  --on-green-cp-color: var(--primary-color);
+
+  --violet-light-color: #d7a9e3;
+  --on-violet-light-color: var(--primary-color);
+
+  --orange-light-color: #f1eb9c;
+  --on-orange-light-color: var(--primary-color);
+
+  --blue-light-color: #b3dff1;
+  --on-blue-light-color: var(--primary-color);
+
+  --grey-orange-light-color: #d7d2cb;
+  --on-grey-orange-light-color: var(--primary-color);
+
+  --grey-orange-color: #aca39a;
+  --on-grey-orange-color: var(--primary-color);
+
+  --grey-orange-dark-color: #6e6259;
+  --on-grey-orange-dark-color: white;
+
+  /** Text & lines */
+  --light-color: white;
+  --on-light-color: var(--dark-color);
+
+  --dark-color: #323232;
+  --on-dark-color: var(--light-color);
+
+  --light-grey-color: #f4f5f7;
+  --on-light-grey-color: var(--dark-color);
+
+  --grey-color: #e9ebec;
+  --on-grey-color: var(--dark-color);
+
+  /** Semantic */
+  --green-color: #00875a;
+  --on-green-color: var(--light-color);
+
+  --yellow-color: #fff0b3;
+  --on-yellow-color: var(--grey-orange-dark-color);
+
+  --red-color: #bc2d2c;
+  --on-red-color: white;
+
+  --red-light-color: #fbe0d9;
+  --on-red-light-color: var(--red-color);
+
+  /* General */
+  --background-color: white;
+  --on-background-color: var(--primary-color);
+
+  /* Extras */
+  --white-0: rgba(255, 255, 255, 0);
+  --white-5: rgba(255, 255, 255, 0.05);
+  --white-75: rgba(255, 255, 255, 0.75);
+  --dark-text-color: black;
+  --shadow-color: rgba(21, 42, 105, 0.12);
+
+  /** Typography */
+  /* Fonts */
+  --regular-font-family: "Heebo-Regular", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --medium-font-family: "Heebo-Medium", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --secondary-font-family: "OpenSans-Regular", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --light-font-family: "OpenSans-Light", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Text sizes */
+  --display-xl: calc(var(--unit) * 6);
+  --display-lg: calc(var(--unit) * 4);
+  --display-md: calc(var(--unit) * 3);
+  --display-sm: calc(var(--unit) * 2.5);
+  --text-md: calc(var(--unit) * 2);
+  --text-sm: calc(var(--unit) * 1.75);
+  --text-xs: calc(var(--unit) * 1.5);
+  --text-xxs: calc(var(--unit) * 1.25);
+
+  /* Line heights */
+  --display-line-height-extra-xl: calc(var(--unit) * 7);
+  --display-line-height-extra-lg: calc(var(--unit) * 5);
+  --display-line-height-extra-md: calc(var(--unit) * 4);
+  --display-line-height-extra-sm: calc(var(--unit) * 3.25);
+  --text-line-height-extra-md: calc(var(--unit) * 2.75);
+  --text-line-height-extra-sm: calc(var(--unit) * 2.5);
+  --text-line-height-extra-xs: calc(var(--unit) * 2);
+
+  /* General */
+  --body-font-family: var(--regular-font-family);
+  --title-font-family: var(--medium-font-family);
+
+  --text-xs-regular-font: var(--text-xs) var(--regular-font-family);
+  --text-md-regular-font: var(--text-md) var(--regular-font-family);
+  --text-xs-regular-extra-font: var(--text-xs) /
+    var(--text-line-height-extra-sm) var(--regular-font-family);
+
+  --text-xs-medium-extra-font: var(--text-xs) / var(--text-line-height-extra-md)
+    var(--medium-font-family);
+  --text-sm-medium-extra-font: var(--text-sm) / var(--text-line-height-extra-md)
+    var(--medium-font-family);
+
+  --text-sm-regular-extra-font: var(--text-sm) /
+    var(--text-line-height-extra-sm) var(--regular-font-family);
+  --text-md-regular-extra-font: var(--text-md) /
+    var(--text-line-height-extra-md) var(--regular-font-family);
+
+  --display-sm-medium-extra-font: var(--display-sm) /
+    var(--display-line-height-extra-sm) var(--medium-font-family);
+  --text-md-medium-font: var(--text-md) var(--medium-font-family);
+  --text-md-medium-extra-font: var(--text-md) / var(--text-line-height-extra-md)
+    var(--medium-font-family);
+
+  --text-xs-secondary-extra-font: var(--text-xs) /
+    var(--text-line-height-extra-xs) var(--secondary-font-family);
+  --text-md-secondary-extra-font: var(--text-md) /
+    var(--text-line-height-extra-xs) var(--secondary-font-family);
+}

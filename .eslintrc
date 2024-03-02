@@ -1,0 +1,11 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": ["node_modules", "**/*.stories.*", "**/*.config.*"],
+  "extends": ["plugin:@stencil/recommended"],
+  "rules": {
+    "@stencil/required-jsdoc": "off",
+    "react/jsx-no-bind": "off"
+  }
+}

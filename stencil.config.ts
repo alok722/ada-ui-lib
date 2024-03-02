@@ -9,6 +9,13 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      copy: [
+        {
+          src: "./assets",
+          dest: "dist/assets",
+          warn: true,
+        },
+      ],
     },
     {
       type: 'docs-readme',
