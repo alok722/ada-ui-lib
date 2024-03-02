@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { BadgeType } from "./components/badge/badge";
 export { BadgeType } from "./components/badge/badge";
 export namespace Components {
-    interface GlBadge {
+    interface AdaBadge {
         /**
           * It defines text of the badge
          */
@@ -18,20 +18,37 @@ export namespace Components {
          */
         "variant": BadgeType;
     }
+    interface AdaIcon {
+        /**
+          * It defines name of the icon
+         */
+        "name": string;
+        /**
+          * It defines size of the icon
+         */
+        "size": "xs" | "s" | "m" | "l" | "xl";
+    }
 }
 declare global {
-    interface HTMLGlBadgeElement extends Components.GlBadge, HTMLStencilElement {
+    interface HTMLAdaBadgeElement extends Components.AdaBadge, HTMLStencilElement {
     }
-    var HTMLGlBadgeElement: {
-        prototype: HTMLGlBadgeElement;
-        new (): HTMLGlBadgeElement;
+    var HTMLAdaBadgeElement: {
+        prototype: HTMLAdaBadgeElement;
+        new (): HTMLAdaBadgeElement;
+    };
+    interface HTMLAdaIconElement extends Components.AdaIcon, HTMLStencilElement {
+    }
+    var HTMLAdaIconElement: {
+        prototype: HTMLAdaIconElement;
+        new (): HTMLAdaIconElement;
     };
     interface HTMLElementTagNameMap {
-        "gl-badge": HTMLGlBadgeElement;
+        "ada-badge": HTMLAdaBadgeElement;
+        "ada-icon": HTMLAdaIconElement;
     }
 }
 declare namespace LocalJSX {
-    interface GlBadge {
+    interface AdaBadge {
         /**
           * It defines text of the badge
          */
@@ -41,15 +58,27 @@ declare namespace LocalJSX {
          */
         "variant"?: BadgeType;
     }
+    interface AdaIcon {
+        /**
+          * It defines name of the icon
+         */
+        "name"?: string;
+        /**
+          * It defines size of the icon
+         */
+        "size"?: "xs" | "s" | "m" | "l" | "xl";
+    }
     interface IntrinsicElements {
-        "gl-badge": GlBadge;
+        "ada-badge": AdaBadge;
+        "ada-icon": AdaIcon;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "gl-badge": LocalJSX.GlBadge & JSXBase.HTMLAttributes<HTMLGlBadgeElement>;
+            "ada-badge": LocalJSX.AdaBadge & JSXBase.HTMLAttributes<HTMLAdaBadgeElement>;
+            "ada-icon": LocalJSX.AdaIcon & JSXBase.HTMLAttributes<HTMLAdaIconElement>;
         }
     }
 }

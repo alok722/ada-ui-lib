@@ -14,7 +14,7 @@ export default {
   },
 };
 
-const Template = ({ text, variant }: BadgeProps) => `<gl-badge text="${text}" variant="${variant}"></gl-badge>`;
+const Template = ({ text, variant }: BadgeProps) => `<ada-badge text="${text}" variant="${variant}"></ada-badge>`;
 
 export const Default = (args: BadgeProps) => Template(args);
 Default.args = {

@@ -1,4 +1,4 @@
-# gl-badge
+# ada-badge
 
 <!-- Auto Generated Below -->
 

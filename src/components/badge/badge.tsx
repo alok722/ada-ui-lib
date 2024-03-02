@@ -15,10 +15,11 @@ export type BadgeProps = {
 };
 
 @Component({
-  tag: "gl-badge",
+  tag: "ada-badge",
   styleUrl: "badge.css",
   shadow: true,
 })
+
 export class Badge implements BadgeProps {
   /** It defines text of the badge */
   @Prop() text!: string;
