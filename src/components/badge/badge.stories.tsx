@@ -18,42 +18,42 @@ const Template = ({ text, variant }: BadgeProps) => `<ada-badge text="${text}" v
 
 export const Default = (args: BadgeProps) => Template(args);
 Default.args = {
-  text: '88',
+  text: 'Default',
   variant: 'default',
 };
 
 export const Info = (args: BadgeProps) => Template(args);
 Info.args = {
-  text: '88',
+  text: 'Info',
   variant: 'info',
 };
 
 export const Success = (args: BadgeProps) => Template(args);
 Success.args = {
-  text: '88',
+  text: 'Success',
   variant: 'success',
 };
 
 export const Warning = (args: BadgeProps) => Template(args);
 Warning.args = {
-  text: '88',
+  text: 'Warning',
   variant: 'warning',
 };
 
 export const Error = (args: BadgeProps) => Template(args);
 Error.args = {
-  text: '88',
+  text: 'Error',
   variant: 'error',
 };
 
 export const Alternative = (args: BadgeProps) => Template(args);
 Alternative.args = {
-  text: '88',
+  text: 'Alternative',
   variant: 'alternative',
 };
 
 export const Inverted = (args: BadgeProps) => Template(args);
 Inverted.args = {
-  text: '88',
+  text: 'Inverted',
   variant: 'inverted',
 };
