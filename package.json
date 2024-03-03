@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "stencil build",
-    "commit": "git add . && git-cz",
+    "commit": "git-cz",
     "dev": "stencil build --dev --watch --serve",
     "start": "concurrently \"npm run start:stencil\" \"npm run start:storybook\"",
     "start:stencil": "stencil build --watch",
