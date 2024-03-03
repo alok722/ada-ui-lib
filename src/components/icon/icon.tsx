@@ -15,7 +15,7 @@ export type IconProps = {
 
 export class Icon implements IconProps {
   /** It defines name of the icon */
-  @Prop() name: string = "pen";
+  @Prop() name: string = "pencil";
 
   /** It defines size of the icon */
   @Prop() size: "xs" | "s" | "m" | "l" | "xl" = "m";
