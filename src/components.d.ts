@@ -18,6 +18,40 @@ export namespace Components {
          */
         "variant": BadgeType;
     }
+    interface AdaButton {
+        /**
+          * Define color of button
+         */
+        "color": "primary" | "light" | "secondary" | "default";
+        /**
+          * Define whether button is enabled/disabled
+         */
+        "disabled": boolean;
+        /**
+          * Define whether button is full width or not
+         */
+        "fullWidth": boolean;
+        /**
+          * Define iconName for button
+         */
+        "iconName"?: string;
+        /**
+          * Define Label of button
+         */
+        "label": string;
+        /**
+          * Define size of button
+         */
+        "size": "s" | "m" | "l";
+        /**
+          * Define the type of button: `icon`, `standard`, `label-icon`
+         */
+        "type": "icon" | "standard" | "label-icon";
+        /**
+          * Define look of button
+         */
+        "variant": "fill" | "outline" | "text";
+    }
     interface AdaIcon {
         /**
           * It defines name of the icon
@@ -29,12 +63,33 @@ export namespace Components {
         "size": "xs" | "s" | "m" | "l" | "xl";
     }
 }
+export interface AdaButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLAdaButtonElement;
+}
 declare global {
     interface HTMLAdaBadgeElement extends Components.AdaBadge, HTMLStencilElement {
     }
     var HTMLAdaBadgeElement: {
         prototype: HTMLAdaBadgeElement;
         new (): HTMLAdaBadgeElement;
+    };
+    interface HTMLAdaButtonElementEventMap {
+        "clicked": void;
+    }
+    interface HTMLAdaButtonElement extends Components.AdaButton, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLAdaButtonElementEventMap>(type: K, listener: (this: HTMLAdaButtonElement, ev: AdaButtonCustomEvent<HTMLAdaButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLAdaButtonElementEventMap>(type: K, listener: (this: HTMLAdaButtonElement, ev: AdaButtonCustomEvent<HTMLAdaButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLAdaButtonElement: {
+        prototype: HTMLAdaButtonElement;
+        new (): HTMLAdaButtonElement;
     };
     interface HTMLAdaIconElement extends Components.AdaIcon, HTMLStencilElement {
     }
@@ -44,6 +99,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ada-badge": HTMLAdaBadgeElement;
+        "ada-button": HTMLAdaButtonElement;
         "ada-icon": HTMLAdaIconElement;
     }
 }
@@ -58,6 +114,44 @@ declare namespace LocalJSX {
          */
         "variant"?: BadgeType;
     }
+    interface AdaButton {
+        /**
+          * Define color of button
+         */
+        "color"?: "primary" | "light" | "secondary" | "default";
+        /**
+          * Define whether button is enabled/disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * Define whether button is full width or not
+         */
+        "fullWidth"?: boolean;
+        /**
+          * Define iconName for button
+         */
+        "iconName"?: string;
+        /**
+          * Define Label of button
+         */
+        "label": string;
+        /**
+          * Emit click event
+         */
+        "onClicked"?: (event: AdaButtonCustomEvent<void>) => void;
+        /**
+          * Define size of button
+         */
+        "size"?: "s" | "m" | "l";
+        /**
+          * Define the type of button: `icon`, `standard`, `label-icon`
+         */
+        "type"?: "icon" | "standard" | "label-icon";
+        /**
+          * Define look of button
+         */
+        "variant"?: "fill" | "outline" | "text";
+    }
     interface AdaIcon {
         /**
           * It defines name of the icon
@@ -70,6 +164,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ada-badge": AdaBadge;
+        "ada-button": AdaButton;
         "ada-icon": AdaIcon;
     }
 }
@@ -78,6 +173,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ada-badge": LocalJSX.AdaBadge & JSXBase.HTMLAttributes<HTMLAdaBadgeElement>;
+            "ada-button": LocalJSX.AdaButton & JSXBase.HTMLAttributes<HTMLAdaButtonElement>;
             "ada-icon": LocalJSX.AdaIcon & JSXBase.HTMLAttributes<HTMLAdaIconElement>;
         }
     }

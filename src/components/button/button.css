@@ -1,0 +1,243 @@
+:host {
+  --button-font-family: var(--medium-font-family);
+
+  --button-fill-color: var(--primary-color);
+  --button-on-fill-color: var(--on-primary-color);
+  --button-hover-fill-color: var(--primary-color-90);
+  --button-disabled-fill-color: var(--grey-orange-color);
+  --button-on-disabled-fill-color: var(--light-color);
+
+  --button-outline-color: transparent;
+  --button-on-outline-color: var(--primary-color);
+  --button-hover-outline-color: var(--primary-color-5);
+  --button-disabled-outline-color: transparent;
+  --button-on-disabled-outline-color: var(--grey-orange-color);
+
+  --button-text-color: transparent;
+  --button-on-text-color: var(--primary-color);
+  --button-hover-text-color: var(--primary-color-5);
+  --button-disabled-text-color: transparent;
+  --button-on-disabled-text-color: var(--grey-orange-color);
+
+  --button-light-fill-color: var(--light-color);
+  --button-on-light-fill-color: var(--primary-color);
+  --button-hover-light-fill-color: var(--light-grey-color);
+
+  --button-light-outline-color: transparent;
+  --button-on-light-outline-color: var(--light-color);
+  --button-hover-light-outline-color: var(--white-5);
+
+  --button-light-text-color: transparent;
+  --button-on-light-text-color: var(--light-color);
+  --button-hover-light-text-color: var(--white-5);
+
+  --button-icon-color: var(--light-grey-color);
+  --button-on-icon-color: var(--primary-color);
+  --button-hover-icon-color: var(--grey-color);
+  --button-disabled-icon-color: var(--grey-orange-light-color);
+  --button-on-disabled-icon-color: var(--grey-orange-dark-color);
+
+  --button-icon-primary-color: var(--primary-color);
+  --button-on-icon-primary-color: var(--on-primary-color);
+  --button-hover-icon-primary-color: var(--primary-color-90);
+
+  --button-icon-secondary-color: var(--secondary-color);
+  --button-on-icon-secondary-color: var(--on-secondary-color);
+  --button-hover-icon-secondary-color: var(--secondary-color-90);
+
+  box-sizing: border-box;
+}
+
+.button {
+  font-size: 0.875rem;
+  padding: 0.625rem 1rem;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--button-font-family);
+}
+
+/* Primary Buttons */
+
+.primary {
+  border: 2px solid var(--button-fill-color);
+  color: var(--button-on-fill-color);
+  background-color: var(--button-fill-color);
+}
+.primary:hover,
+.primary:focus {
+  background: var(--button-hover-fill-color);
+  border-color: var(--button-hover-fill-color);
+}
+
+/* Outlined Buttons */
+
+.outline.primary {
+  border: 2px solid var(--button-on-outline-color);
+  background-color: var(--button-outline-color);
+  color: var(--button-on-outline-color);
+}
+.outline.primary:hover,
+.outline.primary:focus {
+  background: var(--button-hover-outline-color);
+}
+
+/* Text Buttons */
+
+.text.primary {
+  border: 2px solid transparent;
+  color: var(--button-on-text-color);
+  text-decoration: underline;
+  background: var(--button-text-color);
+}
+.text.primary:hover,
+.text.primary:focus {
+  border: 2px solid transparent;
+  background: var(--button-hover-text-color);
+}
+
+/* Light Button */
+
+.light {
+  border: 2px solid var(--button-light-fill-color);
+  color: var(--button-on-light-fill-color);
+  background: var(--button-light-fill-color);
+}
+.light:hover,
+.light:focus {
+  background: var(--button-hover-light-fill-color);
+  border-color: var(--button-hover-light-fill-color);
+}
+
+/* Light Outlined Button */
+
+.outline.light {
+  border: 2px solid var(--button-on-light-outline-color);
+  background: var(--button-light-outline-color);
+  color: var(--button-on-light-outline-color);
+}
+.outline.light:hover,
+.outline.light:focus {
+  background: var(--button-hover-light-outline-color);
+}
+
+/* Light Text Button */
+
+.text.light {
+  color: var(--button-on-light-text-color);
+  text-decoration: underline;
+  border: 2px solid transparent;
+  background: var(--button-light-text-color);
+}
+.text.light:hover,
+.text.light:focus {
+  background: var(--button-hover-light-text-color);
+}
+
+.m {
+  padding: 0.75rem 1.5rem;
+}
+
+.l {
+  padding: 1rem 2rem;
+}
+
+/* Disabled State */
+.disabled {
+  cursor: not-allowed;
+}
+
+.fill.disabled {
+  background-color: var(--button-disabled-fill-color);
+  color: var(--button-on-disabled-fill-color);
+  border: 2px solid var(--button-disabled-fill-color);
+}
+
+.outline.disabled {
+  background: var(--button-disabled-outline-color);
+  border: 2px solid var(--button-on-disabled-outline-color);
+  color: var(--button-on-disabled-outline-color);
+}
+
+.text.disabled {
+  background: var(--button-disabled-text-color);
+  color: var(--button-on-disabled-text-color);
+  border: 2px solid var(--button-on-disabled-text-color);
+}
+
+.full-width {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Icon Button Default */
+
+.icon-btn {
+  padding: var(--xs);
+  width: 2rem;
+  height: 2rem;
+  border: none !important;
+  background: var(--button-icon-color);
+  text-decoration: none !important;
+  cursor: pointer;
+  border-radius: 50% !important;
+}
+.icon-btn > ada-icon {
+  color: var(--button-on-icon-color);
+}
+.icon-btn:hover,
+.icon-btn:focus {
+  background: var(--button-hover-icon-color);
+}
+
+.icon-btn.l,
+.icon-btn.m {
+  width: var(--l);
+  height: var(--l);
+}
+
+/* Icon Button Primary */
+
+.icon-btn.primary {
+  background-color: var(--button-icon-primary-color);
+}
+.icon-btn.primary > ada-icon {
+  color: var(--button-on-icon-primary-color);
+}
+.icon-btn.primary:hover,
+.icon-btn.primary:focus {
+  background: var(--button-hover-icon-primary-color);
+}
+
+/* Icon Button Secondary */
+
+.icon-btn.secondary {
+  background: var(--button-icon-secondary-color);
+}
+.icon-btn.secondary > ada-icon {
+  color: var(--button-on-icon-secondary-color);
+}
+.icon-btn.secondary:hover,
+.icon-btn.secondary:focus {
+  background: var(--button-hover-icon-secondary-color);
+}
+
+/* Icon Button Disabled */
+
+.icon-btn.disabled,
+.icon-btn.disabled:hover,
+.icon-btn.disabled:focus {
+  background: var(--button-disabled-icon-color);
+}
+
+.icon-btn.disabled > ada-icon {
+  color: var(--button-on-disabled-icon-color);
+}
+
+.icon-with-label {
+  margin-right: var(--xxs);
+}
