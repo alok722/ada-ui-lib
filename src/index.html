@@ -1,19 +1,138 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
-    <link rel="stylesheet" href="/assets/fonts.css">
-    <link rel="stylesheet" href="/assets/icon-font.css">
-    <link rel="stylesheet" href="/assets/reset.css">
-    <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="stylesheet" href="/assets/theme.css">
-    <script type="module" src="/build/ada-ui-lib.esm.js"></script>
-    <script nomodule src="/build/ada-ui-lib.js"></script>
-  </head>
-  <body>
-    <ada-badge text="Stencil-JS" variant="default"></ada-badge>
-    <ada-icon></ada-icon>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Ada UI Library</title>
+  <link rel="stylesheet" href="/assets/fonts.css" />
+  <link rel="stylesheet" href="/assets/icon-font.css" />
+  <link rel="stylesheet" href="/assets/reset.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/theme.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 8px;
+    }
+
+    body {
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 100px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #f8f9fa;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .table-wrapper {
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <!-- <img src="logo.png" alt="Ada UI Library Logo" height="30" class="me-2"> -->
+        Ada UI Library
+      </a>
+    </div>
+  </header>
+
+  <div class="container my-4">
+    <div class="row">
+      <div class="col">
+        <p>Explore and preview various components from the Ada UI Library.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="table-wrapper">
+      <table class="table table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th style="width: 2%" class="fw-bold">#</th>
+            <th style="width: 12%" class="fw-bold">Name</th>
+            <th style="width: 16%" class="fw-bold">Tag</th>
+            <th style="width: 70%" class="fw-bold">Preview</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Badge</td>
+            <td><code>ada-badge</code></td>
+            <td class="d-flex gap-1">
+              <ada-badge text="Default" variant="default"></ada-badge>
+              <ada-badge text="Info" variant="info"></ada-badge>
+              <ada-badge text="Success" variant="success"></ada-badge>
+              <ada-badge text="Warning" variant="warning"></ada-badge>
+              <ada-badge text="Error" variant="error"></ada-badge>
+              <ada-badge text="Alternative" variant="alternative"></ada-badge>
+              <ada-badge text="Inverted" variant="inverted"></ada-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Button</td>
+            <td><code>ada-button</code></td>
+            <td class="d-flex gap-1">
+              <ada-button label="Fill" variant="fill" color="primary" size="s" type="standard"></ada-button>
+              <ada-button label="Outline" variant="outline" color="primary" size="s" type="standard"></ada-button>
+              <ada-button label="Text" variant="text" color="primary" size="s" type="standard"></ada-button>
+              <ada-button label="Disabled" variant="fill" color="primary" size="s" type="standard" disabled="true"></ada-button>
+              <ada-button label="Disabled" variant="outline" color="primary" size="s" type="standard" disabled="true"></ada-button>
+              <ada-button label="Pen" variant="fill" color="primary" size="s" type="label-icon" iconName="pen"></ada-button>
+              <ada-button label="Edit" variant="fill" color="secondary" size="s" type="label-icon" iconName="edit"></ada-button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Icon</td>
+            <td><code>ada-icon</code></td>
+            <td>
+              <ada-icon name="pen" size="s"></ada-icon>
+              <ada-icon name="pencil" size="s"></ada-icon>
+              <ada-icon name="blog" size="s"></ada-icon>
+              <ada-icon name="headphones" size="s"></ada-icon>
+              <ada-icon name="film" size="s"></ada-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Ada UI Library</p>
+    </div>
+  </footer>
+
+  <!-- Link Bootstrap 5 JS (Optional) -->
+  <script type="module" src="/build/ada-ui-lib.esm.js"></script>
+  <script nomodule src="/build/ada-ui-lib.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
